@@ -131,10 +131,11 @@ end TCL_Generic;&#13;
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <wire from="(320,160)" to="(320,230)"/>
+    <wire from="(450,270)" to="(450,530)"/>
+    <wire from="(390,270)" to="(450,270)"/>
     <wire from="(350,90)" to="(350,160)"/>
-    <wire from="(390,270)" to="(580,270)"/>
-    <wire from="(580,270)" to="(830,270)"/>
     <wire from="(90,250)" to="(260,250)"/>
+    <wire from="(450,530)" to="(1010,530)"/>
     <wire from="(150,130)" to="(190,130)"/>
     <wire from="(230,270)" to="(260,270)"/>
     <wire from="(90,90)" to="(90,250)"/>
@@ -153,12 +154,12 @@ end TCL_Generic;&#13;
     <wire from="(70,40)" to="(90,40)"/>
     <wire from="(170,90)" to="(190,90)"/>
     <wire from="(170,40)" to="(190,40)"/>
-    <wire from="(830,270)" to="(830,560)"/>
     <wire from="(190,40)" to="(190,90)"/>
     <wire from="(90,40)" to="(90,90)"/>
     <wire from="(390,200)" to="(390,250)"/>
     <wire from="(150,130)" to="(150,310)"/>
     <wire from="(390,40)" to="(390,90)"/>
+    <wire from="(450,270)" to="(580,270)"/>
     <wire from="(580,90)" to="(580,270)"/>
     <wire from="(190,160)" to="(320,160)"/>
     <comp lib="0" loc="(70,40)" name="Probe">
