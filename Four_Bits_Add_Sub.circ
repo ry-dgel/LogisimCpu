@@ -133,6 +133,7 @@ end TCL_Generic;&#13;
     <wire from="(320,160)" to="(320,230)"/>
     <wire from="(350,90)" to="(350,160)"/>
     <wire from="(390,270)" to="(580,270)"/>
+    <wire from="(580,270)" to="(830,270)"/>
     <wire from="(90,250)" to="(260,250)"/>
     <wire from="(150,130)" to="(190,130)"/>
     <wire from="(230,270)" to="(260,270)"/>
@@ -152,6 +153,7 @@ end TCL_Generic;&#13;
     <wire from="(70,40)" to="(90,40)"/>
     <wire from="(170,90)" to="(190,90)"/>
     <wire from="(170,40)" to="(190,40)"/>
+    <wire from="(830,270)" to="(830,560)"/>
     <wire from="(190,40)" to="(190,90)"/>
     <wire from="(90,40)" to="(90,90)"/>
     <wire from="(390,200)" to="(390,250)"/>
@@ -159,6 +161,24 @@ end TCL_Generic;&#13;
     <wire from="(390,40)" to="(390,90)"/>
     <wire from="(580,90)" to="(580,270)"/>
     <wire from="(190,160)" to="(320,160)"/>
+    <comp lib="0" loc="(70,40)" name="Probe">
+      <a name="radix" val="10signed"/>
+    </comp>
+    <comp loc="(390,250)" name="Adder_4_bits"/>
+    <comp lib="1" loc="(320,160)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="8" loc="(455,780)" name="Text">
+      <a name="text" val="MAKE SURE THAT YOU OPENED THIS PROJECT IN &quot;LOGISIM-EVOLUTION&quot;"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp loc="(230,310)" name="TwoSComplementConvert">
+      <a name="label" val="BitFlipper"/>
+    </comp>
+    <comp lib="8" loc="(457,814)" name="Text">
+      <a name="text" val="YOU CAN FIND &quot;LOGISIM-EVOLUTION&quot; PRORAM IN THE ASSIGNMENT'S FOLDER"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
     <comp lib="8" loc="(9,20)" name="Text">
       <a name="text" val="Rigel Zifkin 260683139"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -168,43 +188,31 @@ end TCL_Generic;&#13;
       <a name="text" val="DO NOT USE &quot;LOGISIM&quot; VERSION TO SOLVE THIS ASSIGNMENT!"/>
       <a name="font" val="SansSerif plain 20"/>
     </comp>
-    <comp lib="0" loc="(510,90)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Zero"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(330,90)" name="Pin">
       <a name="label" val="Add_Sub"/>
-    </comp>
-    <comp lib="8" loc="(457,814)" name="Text">
-      <a name="text" val="YOU CAN FIND &quot;LOGISIM-EVOLUTION&quot; PRORAM IN THE ASSIGNMENT'S FOLDER"/>
-      <a name="font" val="SansSerif plain 20"/>
     </comp>
     <comp lib="0" loc="(410,40)" name="Probe">
       <a name="facing" val="west"/>
       <a name="radix" val="10signed"/>
     </comp>
-    <comp loc="(390,250)" name="Adder_4_bits"/>
+    <comp lib="0" loc="(170,40)" name="Probe">
+      <a name="radix" val="10signed"/>
+    </comp>
     <comp lib="0" loc="(600,90)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Overflow"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(170,40)" name="Probe">
-      <a name="radix" val="10signed"/>
+    <comp lib="0" loc="(510,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Zero"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(70,90)" name="Pin">
       <a name="width" val="4"/>
       <a name="label" val="A"/>
-    </comp>
-    <comp loc="(230,310)" name="TwoSComplementConvert">
-      <a name="label" val="BitFlipper"/>
-    </comp>
-    <comp loc="(490,200)" name="IsZero"/>
-    <comp lib="1" loc="(320,160)" name="NOT Gate">
-      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(410,90)" name="Pin">
       <a name="facing" val="west"/>
@@ -217,13 +225,7 @@ end TCL_Generic;&#13;
       <a name="width" val="4"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="8" loc="(455,780)" name="Text">
-      <a name="text" val="MAKE SURE THAT YOU OPENED THIS PROJECT IN &quot;LOGISIM-EVOLUTION&quot;"/>
-      <a name="font" val="SansSerif plain 20"/>
-    </comp>
-    <comp lib="0" loc="(70,40)" name="Probe">
-      <a name="radix" val="10signed"/>
-    </comp>
+    <comp loc="(490,200)" name="IsZero"/>
   </circuit>
   <circuit name="Add_1Bit">
     <a name="circuit" val="Add_1Bit"/>
@@ -242,10 +244,10 @@ end TCL_Generic;&#13;
       <rect height="3" stroke="none" width="10" x="120" y="89"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="117" y="94">S</text>
       <rect height="9" stroke="none" width="2" x="89" y="121"/>
-      <circ-port height="8" pin="60,240" width="8" x="46" y="76"/>
       <circ-port height="8" pin="100,240" width="8" x="46" y="96"/>
-      <circ-port height="10" pin="570,240" width="10" x="125" y="85"/>
       <circ-port height="8" pin="380,240" width="8" x="86" y="46"/>
+      <circ-port height="10" pin="570,240" width="10" x="125" y="85"/>
+      <circ-port height="8" pin="60,240" width="8" x="46" y="76"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="102" y="117">Cout</text>
       <rect fill="none" height="61" stroke="#000000" stroke-width="2" width="60" x="60" y="59"/>
       <text font-family="SansSerif" font-size="24" text-anchor="middle" x="90" y="99">+</text>
@@ -281,52 +283,52 @@ end TCL_Generic;&#13;
     <wire from="(60,190)" to="(60,240)"/>
     <wire from="(320,190)" to="(320,240)"/>
     <wire from="(320,240)" to="(320,290)"/>
-    <comp lib="0" loc="(60,240)" name="Pin">
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="1" loc="(210,210)" name="OR Gate"/>
-    <comp lib="1" loc="(460,270)" name="OR Gate"/>
     <comp lib="0" loc="(570,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Sum"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(100,240)" name="Pin">
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="8" loc="(9,20)" name="Text">
+      <a name="text" val="Rigel Zifkin 260683139"/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="left"/>
+    </comp>
     <comp lib="1" loc="(520,220)" name="NOT Gate"/>
-    <comp lib="8" loc="(452,849)" name="Text">
-      <a name="text" val="DO NOT USE &quot;LOGISIM&quot; VERSION TO SOLVE THIS ASSIGNMENT!"/>
-      <a name="font" val="SansSerif plain 20"/>
-    </comp>
-    <comp lib="1" loc="(570,240)" name="AND Gate"/>
-    <comp lib="0" loc="(380,240)" name="Pin">
-      <a name="label" val="Cin"/>
-    </comp>
-    <comp lib="1" loc="(320,240)" name="AND Gate"/>
-    <comp lib="1" loc="(690,240)" name="OR Gate"/>
+    <comp lib="1" loc="(210,210)" name="OR Gate"/>
+    <comp lib="1" loc="(460,270)" name="OR Gate"/>
     <comp lib="8" loc="(457,814)" name="Text">
       <a name="text" val="YOU CAN FIND &quot;LOGISIM-EVOLUTION&quot; PRORAM IN THE ASSIGNMENT'S FOLDER"/>
       <a name="font" val="SansSerif plain 20"/>
     </comp>
-    <comp lib="1" loc="(460,210)" name="AND Gate"/>
+    <comp lib="1" loc="(320,240)" name="AND Gate"/>
     <comp lib="1" loc="(210,270)" name="AND Gate"/>
-    <comp lib="0" loc="(100,240)" name="Pin">
-      <a name="label" val="B"/>
-    </comp>
+    <comp lib="1" loc="(570,240)" name="AND Gate"/>
+    <comp lib="1" loc="(460,210)" name="AND Gate"/>
     <comp lib="0" loc="(690,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Cout"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(270,260)" name="NOT Gate"/>
     <comp lib="8" loc="(455,780)" name="Text">
       <a name="text" val="MAKE SURE THAT YOU OPENED THIS PROJECT IN &quot;LOGISIM-EVOLUTION&quot;"/>
       <a name="font" val="SansSerif plain 20"/>
     </comp>
-    <comp lib="8" loc="(9,20)" name="Text">
-      <a name="text" val="Rigel Zifkin 260683139"/>
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="halign" val="left"/>
+    <comp lib="1" loc="(270,260)" name="NOT Gate"/>
+    <comp lib="1" loc="(690,240)" name="OR Gate"/>
+    <comp lib="0" loc="(60,240)" name="Pin">
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(380,240)" name="Pin">
+      <a name="label" val="Cin"/>
+    </comp>
+    <comp lib="8" loc="(452,849)" name="Text">
+      <a name="text" val="DO NOT USE &quot;LOGISIM&quot; VERSION TO SOLVE THIS ASSIGNMENT!"/>
+      <a name="font" val="SansSerif plain 20"/>
     </comp>
   </circuit>
   <circuit name="Adder_4_bits">
@@ -350,8 +352,8 @@ end TCL_Generic;&#13;
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="115" y="104">Adder_4_bits</text>
       <rect height="10" stroke="none" width="2" x="109" y="40"/>
       <circ-port height="10" pin="470,250" width="10" x="175" y="55"/>
-      <circ-port height="8" pin="110,290" width="8" x="46" y="56"/>
       <circ-port height="8" pin="200,290" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="110,290" width="8" x="46" y="56"/>
       <rect height="3" stroke="none" width="31" x="95" y="72"/>
       <rect height="27" stroke="none" width="2" x="109" y="60"/>
       <circ-port height="10" pin="680,520" width="10" x="175" y="75"/>
@@ -407,6 +409,27 @@ end TCL_Generic;&#13;
     <wire from="(420,150)" to="(430,150)"/>
     <wire from="(560,500)" to="(630,500)"/>
     <wire from="(220,250)" to="(230,250)"/>
+    <comp lib="0" loc="(110,290)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(470,250)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp loc="(420,150)" name="Add_1Bit"/>
+    <comp loc="(420,390)" name="Add_1Bit"/>
+    <comp lib="0" loc="(200,290)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(110,290)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
     <comp lib="0" loc="(470,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -414,38 +437,10 @@ end TCL_Generic;&#13;
       <a name="label" val="Sum"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(420,230)" name="Add_1Bit"/>
-    <comp lib="0" loc="(680,520)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Overflow"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(680,520)" name="AND Gate"/>
-    <comp loc="(420,310)" name="Add_1Bit"/>
-    <comp loc="(420,390)" name="Add_1Bit"/>
-    <comp lib="0" loc="(110,290)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="0" loc="(200,290)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(200,290)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="B"/>
-    </comp>
-    <comp lib="1" loc="(360,550)" name="XNOR Gate"/>
-    <comp lib="0" loc="(110,290)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
     <comp lib="1" loc="(550,470)" name="XOR Gate"/>
-    <comp lib="0" loc="(470,250)" name="Splitter">
-      <a name="facing" val="west"/>
+    <comp loc="(420,230)" name="Add_1Bit"/>
+    <comp loc="(420,310)" name="Add_1Bit"/>
+    <comp lib="0" loc="(200,290)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
@@ -453,7 +448,14 @@ end TCL_Generic;&#13;
       <a name="facing" val="south"/>
       <a name="label" val="Cin"/>
     </comp>
-    <comp loc="(420,150)" name="Add_1Bit"/>
+    <comp lib="0" loc="(680,520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Overflow"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(680,520)" name="AND Gate"/>
+    <comp lib="1" loc="(360,550)" name="XNOR Gate"/>
   </circuit>
   <circuit name="Half_Adder">
     <a name="circuit" val="Half_Adder"/>
@@ -470,10 +472,10 @@ end TCL_Generic;&#13;
       <rect fill="none" height="61" stroke="#000000" stroke-width="2" width="60" x="60" y="59"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="85">A</text>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="117" y="94">S</text>
-      <circ-port height="10" pin="510,280" width="10" x="85" y="125"/>
       <circ-port height="10" pin="510,240" width="10" x="125" y="85"/>
-      <circ-port height="8" pin="220,240" width="8" x="46" y="76"/>
       <circ-port height="8" pin="280,240" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="220,240" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="510,280" width="10" x="85" y="125"/>
       <rect height="9" stroke="none" width="2" x="89" y="121"/>
       <rect height="3" stroke="none" width="10" x="120" y="89"/>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
@@ -494,14 +496,8 @@ end TCL_Generic;&#13;
     <wire from="(220,190)" to="(320,190)"/>
     <wire from="(220,290)" to="(320,290)"/>
     <wire from="(470,240)" to="(510,240)"/>
-    <comp lib="1" loc="(370,270)" name="AND Gate"/>
-    <comp lib="0" loc="(510,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Cout"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="1" loc="(420,260)" name="NOT Gate"/>
+    <comp lib="1" loc="(470,240)" name="AND Gate"/>
     <comp lib="0" loc="(510,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -509,9 +505,15 @@ end TCL_Generic;&#13;
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(370,210)" name="OR Gate"/>
-    <comp lib="1" loc="(470,240)" name="AND Gate"/>
     <comp lib="0" loc="(220,240)" name="Pin">
       <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(370,270)" name="AND Gate"/>
+    <comp lib="0" loc="(510,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Cout"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(280,240)" name="Pin">
       <a name="label" val="B"/>
@@ -532,8 +534,8 @@ end TCL_Generic;&#13;
       <rect height="4" stroke="none" width="10" x="120" y="78"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="115" y="84">Bout</text>
       <rect fill="none" height="59" stroke="#000000" stroke-width="2" width="59" x="60" y="50"/>
-      <circ-port height="8" pin="100,420" width="8" x="46" y="76"/>
       <circ-port height="10" pin="580,400" width="10" x="125" y="75"/>
+      <circ-port height="8" pin="100,420" width="8" x="46" y="76"/>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="90" y="98">Bit Flipper</text>
       <circ-port height="8" pin="250,260" width="8" x="86" y="36"/>
       <circ-anchor facing="east" height="6" width="6" x="127" y="77"/>
@@ -570,7 +572,13 @@ end TCL_Generic;&#13;
     <wire from="(570,400)" to="(580,400)"/>
     <wire from="(250,350)" to="(250,410)"/>
     <wire from="(250,410)" to="(250,470)"/>
+    <comp lib="1" loc="(330,450)" name="XOR Gate"/>
     <comp lib="1" loc="(330,510)" name="XOR Gate"/>
+    <comp lib="0" loc="(570,400)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
     <comp lib="0" loc="(580,400)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -578,26 +586,20 @@ end TCL_Generic;&#13;
       <a name="label" val="Bout"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(330,450)" name="XOR Gate"/>
+    <comp lib="1" loc="(330,390)" name="XOR Gate"/>
     <comp lib="0" loc="(250,260)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="Flip"/>
-    </comp>
-    <comp lib="0" loc="(100,420)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="Bin"/>
-    </comp>
-    <comp lib="0" loc="(570,400)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
     </comp>
     <comp lib="0" loc="(120,420)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
     <comp lib="1" loc="(330,330)" name="XOR Gate"/>
-    <comp lib="1" loc="(330,390)" name="XOR Gate"/>
+    <comp lib="0" loc="(100,420)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Bin"/>
+    </comp>
   </circuit>
   <circuit name="IsZero">
     <a name="circuit" val="IsZero"/>
@@ -647,30 +649,30 @@ end TCL_Generic;&#13;
     <wire from="(310,360)" to="(310,420)"/>
     <wire from="(450,330)" to="(450,390)"/>
     <wire from="(450,430)" to="(450,490)"/>
-    <comp lib="1" loc="(530,410)" name="NOT Gate"/>
-    <comp lib="0" loc="(260,380)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="1" loc="(390,330)" name="AND Gate"/>
-    <comp lib="0" loc="(260,470)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0xf"/>
-    </comp>
+    <comp lib="1" loc="(390,490)" name="AND Gate"/>
+    <comp lib="1" loc="(390,440)" name="AND Gate"/>
     <comp lib="1" loc="(500,410)" name="OR Gate">
       <a name="inputs" val="4"/>
     </comp>
     <comp lib="1" loc="(390,380)" name="AND Gate"/>
-    <comp lib="1" loc="(390,490)" name="AND Gate"/>
+    <comp lib="1" loc="(390,330)" name="AND Gate"/>
+    <comp lib="0" loc="(260,380)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="1" loc="(530,410)" name="NOT Gate"/>
     <comp lib="0" loc="(260,380)" name="Pin">
       <a name="width" val="4"/>
       <a name="label" val="Ain"/>
+    </comp>
+    <comp lib="0" loc="(260,470)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xf"/>
     </comp>
     <comp lib="0" loc="(260,470)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="1" loc="(390,440)" name="AND Gate"/>
     <comp lib="0" loc="(530,410)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
