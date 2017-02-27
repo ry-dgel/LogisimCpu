@@ -23,12 +23,12 @@ Ram IO
 Arithmetic
     Adding
         ADD Register1 Register2
-        11000|R1|R2
+        11000|R1|R2|0
     Subratcting
         SUB Register1 Register2
-        11001|R1|R2
+        11001|R1|R2|0
     Bit Count
-            5|1|1
+            5|1|1|1
 
     Optional: Multiplying
         MULT Register Constant
@@ -39,12 +39,12 @@ Arithmetic
 User IO
     Printing
         PRT Register
-        110100|R
+        110100|R|0
     Reading
         INP Register
-        110101|R
+        110101|R|0
     Bit Count
-             6|1
+             6|1|1
 Control
     Stoping
         STOP
