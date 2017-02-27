@@ -1,0 +1,56 @@
+Initial definition of CPU assembly/machine language
+
+Branching
+    Equal
+        BEQ Register1 Register2 Address
+        00|R1|R2|Addr
+    Not Equal
+        BNQ Register1 Register2 Address
+        01|R1|R2|Addr
+    Bit Count
+         2| 1| 1| 4
+
+Ram IO
+    Load
+        LD Register Address
+        100|R|Addr
+    Store
+        STR Register Address
+        101|R|Addr
+    Bit Count
+          3|1| 4
+
+Arithmetic
+    Adding
+        ADD Register1 Register2
+        11000|R1|R2
+    Subratcting
+        SUB Register1 Register2
+        11001|R1|R2
+    Bit Count
+            5|1|1
+
+    Optional: Multiplying
+        MULT Register Constant
+        111|R|Const
+    Bit Count
+          3|1|4
+
+User IO
+    Printing
+        PRT Register
+        110100|R
+    Reading
+        INP Register
+        110101|R
+    Bit Count
+             6|1
+Control
+    Stoping
+        STOP
+        11011111
+    Optional: Flushing - Set all to 0
+        FLSH
+        11011110
+    Bit Count
+               8
