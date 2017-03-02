@@ -48,9 +48,9 @@ User IO
 Control
     Stoping
         STOP
-        11011111
+        00000001
     Optional: Flushing - Set all to 0
         FLSH
-        11011110
+        00000000
     Bit Count
                8
