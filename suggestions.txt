@@ -1,0 +1,4 @@
+
+
+Can i move the clock bit on the General Register Schematic to the west side? it is currently right underneath the output. 
+cannot find any place where it would affect but thought it better to ask. -GC
