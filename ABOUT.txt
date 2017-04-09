@@ -1,0 +1,79 @@
+PALE HORSE
+
+
+
+Instructions for Multiplication:
+
+0 0000 | 110101 0 0  #11010100 INP R0
+1 0001 | 100 1 1111  #10011111 LD  R1, F
+2 0010 | 11000 1 0 0 #11000100 ADD R1, R0
+3 0011 | 101 1 1111  #10111111 STR R1, F
+4 0100 | 100 0 1101  #10011101 LD  R1, D
+5 0101 | 100 1 1110  #10001100 LD  R0, C
+6 0110 | 11001 0 1 0 #11001010 SUB R0, R1
+7 0111 | 101 0 1101  #10101101 STR R0, D
+8 1000 | 100 1 1110  #10011110 LD  R1, E
+9 1001 | 01 0 1 0000 #01010000 BNE  R0, R1, 0
+A 1010 | 100 0 1111  #10001111 LD  R0, F
+B 1011 | 110100 0 0  #11010000 PNT R0
+C 1100 | 00000001    #00000001 STP //1
+D 1101 | 00000111    #00000111 7   //a
+E 1110 | 00000000    #00000000 0   //Counter Initialized
+F 1111 | 00000000    #00000000 0   //Result Initialized
+
+Initial definition of CPU assembly/machine language
+
+Branching
+    Equal
+        BEQ Register1 Register2 Address
+        00|R1|R2|Addr
+    Not Equal
+        BNQ Register1 Register2 Address
+        01|R1|R2|Addr
+    Bit Count
+         2| 1| 1| 4
+
+Ram IO
+    Load
+        LD Register Address
+        100|R|Addr
+    Store
+        STR Register Address
+        101|R|Addr
+    Bit Count
+          3|1| 4
+
+Arithmetic
+    Adding
+        ADD Register1 Register2
+        11000|R1|R2|0
+    Subratcting
+        SUB Register1 Register2
+        11001|R1|R2|0
+    Bit Count
+            5|1|1|1
+
+    Optional: Multiplying
+        MULT Register Constant
+        111|R|Const
+    Bit Count
+          3|1|4
+
+User IO
+    Printing
+        PRT Register
+        110100|R|0
+    Reading
+        INP Register
+        110101|R|0
+    Bit Count
+             6|1|1
+Control
+    Stoping
+        STOP
+        00000001
+    Optional: Flushing - Set all to 0
+        FLSH
+        00000000
+    Bit Count
+               8
